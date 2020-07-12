@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 import Layout from './submodules/base_layout/src/components/interface.vue';
 
 export default {
