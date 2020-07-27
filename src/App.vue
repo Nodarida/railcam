@@ -1,20 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Layout/>
+    <Layout> 
+      <template v-slot:controlcomponent> <controls></controls> </template>
+    </Layout>
   </div>
 </template>
 
-<script>
 
+<script>
+import Controls from './components/control.vue';
 import Layout from './submodules/base_layout/src/components/interface.vue';
 
 export default {
   name: 'App',
   components: {
-    Layout
+    Layout,
+    Controls
   }
 }
+
+
 </script>
 
 <style>
@@ -26,4 +32,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
 </style>
