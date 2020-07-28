@@ -2,8 +2,7 @@
     <div>
         <b-button @click="move()">go</b-button>
         <b-button @click="home()">home</b-button>
-        <b-form-input v-model="position" placeholder="Position eingeben"/>
-
+        <b-form-input v-model="position" placeholder="Position eingeben" />
     </div>
 </template>
 
@@ -23,7 +22,7 @@
             connect: function () {
                 console.log('socket connected')
                 this.connected = true;
-                this.ownId = this.$socket.id
+                this.$store.state.ownID = this.$socket.id
                 this.$socket.emit("register_front")
             },
             disconnect: function () {
@@ -34,29 +33,13 @@
             nsp_list: function (data) {
                 console.log("NSPs:" + data);
             },
-            update_queue: function (data) {
-                this.currentQueue = data;
-            },
-            queue_ping: function () {
-                this.$socket.emit("queue_pong")
-            },
-            update_timer: function (data) {
-                this.currentTimer = data;
-            },
-            client_name: function (data) {
-                this.clientName = data;
-            }
+
         },
         data: function () {
             return {
                 connected: false,
-                currentQueue: [],
-                ownId: "undefined",
-                clientName: "undefined",
-                currentTimer: 0,
-                position: 0,
             }
-        }
+        },
 
     }
 </script>
