@@ -7,7 +7,13 @@
 </template>
 
 <script>
+    import SimpleQueue from "./SimpleQueueComponent"
+
     export default {
+        components: {
+         SimpleQueue
+            
+            },
         methods: {
             //CHANGEME: die Namen der Nachrichten die ihr mit emit() verschickt müssen mit dem Backend matchen
             move: function (preset) {
@@ -34,16 +40,23 @@
                 console.log("NSPs:" + data);
             },
 
+
+            nachrichtenname: function () {
+                console.log('this method was fired by the socket server. eg: io.emit("nachrichtenname", data)')
+            }
+
         },
-        data: function () {
+
+    data: function () {
             return {
                 connected: false,
             }
         },
 
     }
+
+
 </script>
 
 <style>
-
 </style>

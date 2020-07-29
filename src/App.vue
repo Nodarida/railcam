@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Layout streamUrl=''>
+    <Layout streamUrl='http://169.254.124.251:8080/stream.mjpg'>
       <template v-slot:videocomponent></template>
         <template v-slot:controlcomponent>
 
