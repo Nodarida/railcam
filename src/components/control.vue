@@ -3,17 +3,18 @@
         <b-button @click="move()">go</b-button>
         <b-button @click="home()">home</b-button>
         <b-form-input v-model="position" placeholder="Position eingeben" />
+
     </div>
 </template>
 
 <script>
-    import SimpleQueue from "./SimpleQueueComponent"
+
 
     export default {
         components: {
-         SimpleQueue
-            
-            },
+          
+
+        },
         methods: {
             //CHANGEME: die Namen der Nachrichten die ihr mit emit() verschickt müssen mit dem Backend matchen
             move: function (preset) {
@@ -47,15 +48,13 @@
 
         },
 
-    data: function () {
+        data: function () {
             return {
                 connected: false,
             }
         },
 
     }
-
-
 </script>
 
 <style>
