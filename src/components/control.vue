@@ -51,6 +51,7 @@
         data: function () {
             return {
                 connected: false,
+                position: 0
             }
         },
 
