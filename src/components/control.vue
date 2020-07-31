@@ -1,8 +1,9 @@
 <template>
     <div>
-        <b-button @click="move()">go</b-button>
-        <b-button @click="home()">home</b-button>
+        <button v-on:click="move()">go</button>
+        <button v-on:click="home()">home</button>
         <b-form-input v-model="position" placeholder="Position eingeben" />
+        
 
     </div>
 </template>
@@ -17,11 +18,12 @@
         },
         methods: {
             //CHANGEME: die Namen der Nachrichten die ihr mit emit() verschickt müssen mit dem Backend matchen
-            move: function (preset) {
-                console.log("Click button " + preset);
+            move: function () {
+                console.log("Click button ");
                 this.$socket.emit('move', this.position);
             },
             home: function () {
+                console.log("home sendet")
                 this.$socket.emit('home');
             }
         },

@@ -9,7 +9,7 @@ import Vuex from 'vuex';
 Vue.use(new VueSocketIO({
   debug: true,
   // eslint-disable-next-line no-template-curly-in-string
-  connection: 'https://hal.hfg.design:10000/Noah_control',
+  connection: 'https://hal.hfg.design:10000/RailRoad_control',
   options: {
     useConnectionNamespace: true,
   },
