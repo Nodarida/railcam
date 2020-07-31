@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Layout streamUrl='http://169.254.124.251:8080/stream.mjpg'>
+    <img alt="HfG-Logo" src="./assets/hfg.png">
+    <Layout streamUrl='http://hal.hfg.design:50005/live-20680.mjpg'>
       <template v-slot:videocomponent></template>
         <template v-slot:controlcomponent>
 
